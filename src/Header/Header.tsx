@@ -1,14 +1,18 @@
 import './Header.pcss';
 import React from 'react';
-import logo from './logo.svg';
+import logo from './github-mark-logo.png';
 
-export const Header = () => (
+export const Header = ({isUsingGraphQLAPI = false, onFetchApiChanged}: {isUsingGraphQLAPI: boolean, onFetchApiChanged: any}) => (
     <header className="header">
-        <div>
+        <span className="header__additional-info"/>
+        <span className="header__branding">
             <img src={logo} title="Github Profile Viewer" className="header__logo"/>
-        </div>
-        <div className="header__text">
-            Github public profile viewer
-        </div>
+            <span className="header__text">Github public profile viewer</span>
+        </span>
+
+        <span className="header__graphql-selector">
+            <label htmlFor="graph-ql-api">Use GraphQL API</label>
+            <input type="checkbox" id="graph-ql-api" checked={isUsingGraphQLAPI} onChange={onFetchApiChanged}/>
+        </span>
     </header>
 );

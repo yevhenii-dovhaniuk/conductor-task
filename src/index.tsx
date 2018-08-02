@@ -3,23 +3,25 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {store} from './store';
 import {BrowserRouter, Route} from 'react-router-dom';
-import App from "./App/App";
 import './index.pcss';
-import {Header} from "./Header/Header";
+import {HeaderContainer} from "./Header/Header.container";
+import {UserNameInputContainer} from "./UserNameInput/UserNameInput.container";
 
 const User = () => <div>User</div>;
 
 ReactDOM.render(
     <Provider store={store}>
-        <div>
-            <Header/>
+        <>
+            <HeaderContainer/>
             <BrowserRouter>
-                <div>
-                    <Route path="" component={App}/>
-                    <Route path="/user" component={User}/>
+                <div className="content">
+                    <div className="content__wrapper">
+                        <Route path="/" component={UserNameInputContainer}/>
+                        <Route path="/user" exact component={User}/>
+                    </div>
                 </div>
             </BrowserRouter>
-        </div>
+        </>
     </Provider>,
     document.getElementById('root') as HTMLElement
 );
