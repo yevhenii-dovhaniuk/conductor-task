@@ -3,6 +3,8 @@ import {onUserNameTyped, onUserNameSubmit} from "./UserNameInput.actions";
 import {UserNameInput} from "./UserNameInput";
 
 const mapStateToProps = (state: any) => ({
+    blockUserInput: state.userName.blockUserInput,
+    errorNoUser: state.userName.errorNoUser,
     suggestions: state.userName.suggestions,
     value: state.userName.value
 });

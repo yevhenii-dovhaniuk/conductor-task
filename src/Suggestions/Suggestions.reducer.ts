@@ -9,7 +9,11 @@ const defaultSuggestionsState = {
 export const suggestions = (state = defaultSuggestionsState, action: Action<any>) => {
     switch (action.type) {
         case SUGGESTIONS_RECEIVED:
-            return {...state, values: action.payload.items, total: action.payload.total_count};
+            return {
+                ...state,
+                total: action.payload.total_count,
+                values: action.payload.items
+            };
         default:
             return {...state};
     }

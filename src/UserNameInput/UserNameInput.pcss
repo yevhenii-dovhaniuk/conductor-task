@@ -1,12 +1,21 @@
 .user-name-input {
-  display: flex;
+    display: flex;
 
-  &__input-fields {
-    line-height: 36px;
-    margin: 20px 0;
-
-    button, label, input {
-      padding: 5px;
+    div {
+        margin: 0 10px;
     }
-  }
+
+    button,
+    label,
+    input {
+        padding: 5px;
+    }
+
+    &__input,
+    &__button {
+        &--disabled {
+            cursor: not-allowed;
+            color: grey;
+        }
+    }
 }

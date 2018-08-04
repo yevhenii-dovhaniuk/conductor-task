@@ -4,6 +4,7 @@ import {Suggestions} from "./Suggestions";
 
 const mapStateToProps = (state: any) => ({
     suggestions: state.suggestions.values,
+    suggestionsLoading: state.userName.suggestionsLoading,
     total: state.suggestions.total
 });
 
@@ -12,4 +13,4 @@ export const SuggestionsContainer = connect(
     {
         onSuggestionSelected
     }
-)(Suggestions);
+)(Suggestions as any);

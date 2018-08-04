@@ -1,7 +1,12 @@
 import {Action} from "redux-actions";
 import {FETCH_API_CHANGED} from "./FetchType.actions";
+import {FetchTypeState} from "./FetchType.model";
 
-export const fetchType = (state: any = {}, action: Action<boolean>) => {
+const defaultFetchTypeState: FetchTypeState = {
+    isUsingGraphQLAPI: false
+};
+
+export const fetchType = (state = defaultFetchTypeState, action: Action<boolean>) => {
     switch (action.type) {
         case FETCH_API_CHANGED:
             return {...state, isUsingGraphQLAPI: !state.isUsingGraphQLAPI};

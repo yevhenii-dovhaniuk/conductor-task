@@ -1,25 +1,33 @@
-.suggestions {
-  margin: 20px;
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
-  & > div {
-    padding: 5px;
-  }
+.suggestions {
+    & > div {
+        padding: 5px;
+    }
+
+    &__loading {
+        animation: rotate 2s linear infinite;
+    }
 }
 
 .suggestion {
-  display: flex;
-  align-items: center;
-
-  &__login {
-    cursor: pointer;
-  }
-
-  &__icon {
-    height: 16px;
-  }
-
-  a {
     display: flex;
     align-items: center;
-  }
+
+    &__login {
+        cursor: pointer;
+    }
+
+    &__icon {
+        height: 16px;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+    }
 }

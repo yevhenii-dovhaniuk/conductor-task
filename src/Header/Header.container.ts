@@ -10,5 +10,5 @@ export const HeaderContainer = connect(
     mapStateToProps,
     {
         onFetchApiChanged
-    },
+    }
 )(Header);
