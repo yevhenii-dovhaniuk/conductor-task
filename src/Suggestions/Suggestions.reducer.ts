@@ -1,5 +1,5 @@
-import {Action} from "redux-actions";
-import {SUGGESTIONS_RECEIVED} from "./Suggestions.actions";
+import {Action} from 'redux-actions';
+import {SUGGESTIONS_RECEIVED} from './Suggestions.actions';
 
 const defaultSuggestionsState = {
     total: 0,

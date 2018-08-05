@@ -1,8 +1,8 @@
-import {fetchRepoData, REPO_DATA_RECEIVED, REPO_DATA_REQUESTED} from "../Repo.actions";
-import {createAction} from "redux-actions";
+import {fetchRepoData, REPO_DATA_RECEIVED, REPO_DATA_REQUESTED} from '../Repo.actions';
+import {createAction} from 'redux-actions';
 
-describe("Repo actions test", () => {
-    test("should dispatch DATA_REQUESTED action", () => {
+describe('Repo actions test', () => {
+    test('should dispatch DATA_REQUESTED action', () => {
         const mockDispatch = jest.fn();
         const mockGetState = () => ({
             fetchType: {
@@ -10,7 +10,7 @@ describe("Repo actions test", () => {
             },
             router: {
                 location: {
-                    pathName: "test-path"
+                    pathName: 'test-path'
                 }
             }
         });

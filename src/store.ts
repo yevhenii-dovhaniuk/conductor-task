@@ -24,8 +24,4 @@ const rootReducer = combineReducers({
     userName
 });
 
-export const store = createStore(
-    connectRouter(history)(rootReducer),
-    {},
-    enhancer
-);
+export const store = createStore(connectRouter(history)(rootReducer), {}, enhancer);

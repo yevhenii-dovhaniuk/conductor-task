@@ -1,9 +1,9 @@
-import React, {ChangeEvent} from "react";
-import "./UserNameInput.pcss";
-import {SuggestionsContainer} from "../Suggestions/Suggestions.container";
-import {UserInputProps} from "./UserNameInput.model";
-import {Error} from "../Error/Error";
-import classnames from "classnames";
+import React, {ChangeEvent} from 'react';
+import './UserNameInput.pcss';
+import {SuggestionsContainer} from '../Suggestions/Suggestions.container';
+import {UserInputProps} from './UserNameInput.model';
+import {Error} from '../Error/Error';
+import classnames from 'classnames';
 
 export class UserNameInput extends React.Component<UserInputProps> {
     private handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -16,10 +16,10 @@ export class UserNameInput extends React.Component<UserInputProps> {
 
     public render() {
         const inputFieldClasses = classnames({
-            "user-name-input__input--disabled": this.props.blockUserInput
+            'user-name-input__input--disabled': this.props.blockUserInput
         });
         const buttonClasses = classnames({
-            "user-name-input__button--disabled": !this.props.value || this.props.blockUserInput
+            'user-name-input__button--disabled': !this.props.value || this.props.blockUserInput
         });
         return (
             <div className="user-name-input">
@@ -49,8 +49,8 @@ export class UserNameInput extends React.Component<UserInputProps> {
                         </button>
                     </form>
                 </div>
-                <Error errorMessage="User does not exist" display={this.props.errorNoUser}/>
-                <SuggestionsContainer/>
+                <Error errorMessage="User does not exist" display={this.props.errorNoUser} />
+                <SuggestionsContainer />
             </div>
         );
     }

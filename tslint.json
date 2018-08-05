@@ -6,7 +6,8 @@
     "interface-name": false,
     "member-ordering": false,
     "no-debugger": false,
-    "jsx-boolean-value": false
+    "jsx-boolean-value": false,
+    "quotemark": [true, "single", "jsx-double"]
   },
   "linterOptions": {
     "exclude": [

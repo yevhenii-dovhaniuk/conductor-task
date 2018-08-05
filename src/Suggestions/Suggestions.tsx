@@ -1,9 +1,9 @@
-import React from "react";
-import {map, take, partial} from "lodash";
-import linkIcon from "./suggestions-link-icon.svg";
-import loadingIcom from "./suggestions-loading.svg";
-import "./Suggestions.pcss";
-import {Suggestion, SuggestionsProps} from "./Suggestions.model";
+import React from 'react';
+import {map, take, partial} from 'lodash';
+import linkIcon from './suggestions-link-icon.svg';
+import loadingIcom from './suggestions-loading.svg';
+import './Suggestions.pcss';
+import {Suggestion, SuggestionsProps} from './Suggestions.model';
 
 export class Suggestions extends React.PureComponent<SuggestionsProps, any> {
     private renderHeading(length: number) {

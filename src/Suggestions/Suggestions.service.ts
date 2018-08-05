@@ -1,8 +1,8 @@
-import {Suggestion} from "./Suggestions.model";
-import {FetchType} from "../FetchType/FetchType.model";
+import {Suggestion} from './Suggestions.model';
+import {FetchType} from '../FetchType/FetchType.model';
 
 export const fetchSuggestions = (
-    typedUserName: string = "",
+    typedUserName: string = '',
     fetchTypePrefix: FetchType
 ): Promise<Suggestion[]> =>
     fetch(`/api/${fetchTypePrefix}/suggestions/${typedUserName}`)

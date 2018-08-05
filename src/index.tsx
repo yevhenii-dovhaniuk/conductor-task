@@ -14,17 +14,20 @@ ReactDOM.render(
     <Provider store={store}>
         <ConnectedRouter history={history}>
             <>
-                <HeaderContainer history={history}/>
+                <HeaderContainer history={history} />
                 <div className="content">
                     <div className="content__wrapper">
-                        <Route path="/" exact={true} component={UserNameInputContainer}/>
-                        <Route path="/user/:userName" exact={true} component={UserContainer}/>
-                        <Route path="/user/:userName/repo/:routeName/" exact={true} component={RepoContainer} />
+                        <Route path="/" exact={true} component={UserNameInputContainer} />
+                        <Route path="/user/:userName" exact={true} component={UserContainer} />
+                        <Route
+                            path="/user/:userName/repo/:routeName/"
+                            exact={true}
+                            component={RepoContainer}
+                        />
                     </div>
                 </div>
             </>
         </ConnectedRouter>
-
     </Provider>,
     document.getElementById("root") as HTMLElement
 );

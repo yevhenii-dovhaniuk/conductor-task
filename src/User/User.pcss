@@ -1,155 +1,161 @@
 .user {
-  display: grid;
+    display: grid;
 
-  grid:
-  "icon repositories general-info" 200px
-  "name repositories stars" 70px
-  "login repositories stars" 30px
-  "created repositories stars" 25px
-  "updated repositories stars" 25px
-  "updated repositories stars" auto
-  "none-first repositories none-third" auto
-  / 1fr 5fr 1.5fr;
+    grid:
+        "icon repositories general-info" 200px
+        "name repositories stars" 70px
+        "login repositories stars" 30px
+        "created repositories stars" 25px
+        "updated repositories stars" 25px
+        "updated repositories stars" auto
+        "none-first repositories none-third" auto
+        / 1fr 5fr 1.5fr;
 
-  grid-column-gap: 25px;
-  grid-row-gap: 5px;
+    grid-column-gap: 25px;
+    grid-row-gap: 5px;
 
-  .tile {
-    border: 1px solid #d4d4d4;
-    background: white;
-  }
-
-  &__icon {
-    grid-area: icon;
-    img {
-      height: 200px;
-      width: 200px;
-    }
-  }
-
-  &__repositories {
-    grid-area: repositories;
-  }
-
-  &__stars {
-    grid-area: stars;
-  }
-
-  &__contributions {
-    grid-area: contributions;
-  }
-
-  &__name {
-    grid-area: name;
-    font-size: 24px;
-    font-family: monospace;
-  }
-
-  &__login {
-    grid-area: login;
-    font-family: 'Roboto', monospace;
-    font-size: 18px;
-  }
-
-  &__created {
-    grid-area: created;
-  }
-
-  &__updated {
-    grid-area: updated;
-  }
-
-  &__created, &__updated {
-    font-size: 14px;
-    color: #707070;
-  }
-
-  &__bio {
-    grid-area: bio;
-  }
-
-  &__stars {
-    grid-area: stars;
-  }
-
-  &__general-info {
-    grid-area: general-info;
-
-    div {
-      margin: 5px 0;
-    }
-  }
-
-  &__icon, &__name, &__login, &__created, &__updated, &__general-info {
-    &.tile {
-      background: initial;
-      border: initial;
-    }
-  }
-
-  &__repository {
-    padding: 10px 20px;
-    cursor: pointer;
-    color: #0366d6;
-    display: flex;
-    justify-content: space-between;
-
-    &--none {
-      align-self: center;
-      color: grey;
+    .tile {
+        border: 1px solid #d4d4d4;
+        background: white;
     }
 
-    &-info {
-      display: flex;
-      align-items: center;
-      color: black;
+    &__icon {
+        grid-area: icon;
+        img {
+            height: 200px;
+            width: 200px;
+        }
     }
 
-    &:hover {
-      text-decoration: underline;
+    &__repositories {
+        grid-area: repositories;
     }
 
-    a {
-      text-decoration: none;
-      color: #0366d6;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    &__stars {
+        grid-area: stars;
     }
-  }
 
-  &__repositories-container {
-    & > div {
-      border-top: 1px solid #f1f1f1;
-      &:nth-child(odd) {
-        background: #fdfdfd;
-      }
-      &:nth-child(even) {
-        background: none;
-      }
-      &:last-child {
-        border-bottom: 1px solid #f1f1f1;
-      }
+    &__contributions {
+        grid-area: contributions;
     }
-  }
+
+    &__name {
+        grid-area: name;
+        font-size: 24px;
+        font-family: monospace;
+    }
+
+    &__login {
+        grid-area: login;
+        font-family: "Roboto", monospace;
+        font-size: 18px;
+    }
+
+    &__created {
+        grid-area: created;
+    }
+
+    &__updated {
+        grid-area: updated;
+    }
+
+    &__created,
+    &__updated {
+        font-size: 14px;
+        color: #707070;
+    }
+
+    &__bio {
+        grid-area: bio;
+    }
+
+    &__stars {
+        grid-area: stars;
+    }
+
+    &__general-info {
+        grid-area: general-info;
+
+        div {
+            margin: 5px 0;
+        }
+    }
+
+    &__icon,
+    &__name,
+    &__login,
+    &__created,
+    &__updated,
+    &__general-info {
+        &.tile {
+            background: initial;
+            border: initial;
+        }
+    }
+
+    &__repository {
+        padding: 10px 20px;
+        cursor: pointer;
+        color: #0366d6;
+        display: flex;
+        justify-content: space-between;
+
+        &--none {
+            align-self: center;
+            color: grey;
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0366d6;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__repositories-container {
+        & > div {
+            border-top: 1px solid #f1f1f1;
+            &:nth-child(odd) {
+                background: #fdfdfd;
+            }
+            &:nth-child(even) {
+                background: none;
+            }
+            &:last-child {
+                border-bottom: 1px solid #f1f1f1;
+            }
+        }
+    }
 }
 
 .tile {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  &__header {
-    align-self: center;
-    font-size: 20px;
-    padding: 10px 0;
-  }
+    &__header {
+        align-self: center;
+        font-size: 20px;
+        padding: 10px 0;
+    }
 }
 
 .hireable {
-  color: green;
+    color: green;
 }
 
 .not-hireable {
-  color: red;
+    color: red;
 }

@@ -1,4 +1,4 @@
-import {repo} from "../Repo.reducer";
+import {repo} from '../Repo.reducer';
 
 describe('Repo reducer test', () => {
     test('should return the same value for multiple calls with the same args', () => {

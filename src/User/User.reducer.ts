@@ -1,6 +1,6 @@
-import {UserState} from "./User.model";
-import {Action} from "redux-actions";
-import {USER_DETAILS_RECEIVED} from "./User.actions";
+import {UserState} from './User.model';
+import {Action} from 'redux-actions';
+import {USER_DETAILS_RECEIVED} from './User.actions';
 
 const defaultUserState: UserState = {
     data: undefined

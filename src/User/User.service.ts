@@ -1,5 +1,5 @@
-import {FetchType} from "../FetchType/FetchType.model";
-import {User} from "./User.model";
+import {FetchType} from '../FetchType/FetchType.model';
+import {User} from './User.model';
 
 export const userExists = (userName: string, fetchTypePrefix: FetchType): Promise<any> => {
     return fetch(`/api/${fetchTypePrefix}/user/${userName}/exists`).then(r => r.json());

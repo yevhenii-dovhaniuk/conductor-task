@@ -1,6 +1,6 @@
-import {connect} from "react-redux";
-import {onSuggestionSelected} from "./Suggestions.actions";
-import {Suggestions} from "./Suggestions";
+import {connect} from 'react-redux';
+import {onSuggestionSelected} from './Suggestions.actions';
+import {Suggestions} from './Suggestions';
 
 const mapStateToProps = (state: any) => ({
     suggestions: state.suggestions.values,

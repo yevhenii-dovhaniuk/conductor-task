@@ -1,11 +1,10 @@
-import {Action} from "redux-actions";
-import {REPO_DATA_RECEIVED, REPO_DATA_REQUESTED} from "./Repo.actions";
+import {Action} from 'redux-actions';
+import {REPO_DATA_RECEIVED, REPO_DATA_REQUESTED} from './Repo.actions';
 
 const defaultState = {
     data: {},
     loading: false
 };
-
 
 export const repo = (state = defaultState, action: Action<any>) => {
     switch (action.type) {

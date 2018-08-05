@@ -1,6 +1,6 @@
-import {connect} from "react-redux";
-import {Header} from "./Header";
-import {onFetchApiChanged} from "../FetchType/FetchType.actions";
+import {connect} from 'react-redux';
+import {Header} from './Header';
+import {onFetchApiChanged} from '../FetchType/FetchType.actions';
 
 const mapStateToProps = (state: any) => ({
     isUsingGraphQLAPI: state.fetchType.isUsingGraphQLAPI

@@ -1,6 +1,6 @@
-import React from "react";
-import "./Error.pcss";
-import icon from "./error-icon.svg";
+import React from 'react';
+import './Error.pcss';
+import icon from './error-icon.svg';
 
 export const Error = ({errorMessage, display}: {errorMessage: string; display: boolean}) =>
     display ? (

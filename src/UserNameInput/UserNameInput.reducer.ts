@@ -1,13 +1,13 @@
-import {Action} from "redux-actions";
-import {ERROR_USER_DOES_NOT_EXIST, USER_NAME_TYPED} from "./UserNameInput.actions";
-import {SUGGESTIONS_RECEIVED} from "../Suggestions/Suggestions.actions";
-import {USER_DETAILS_RECEIVED, VERIFY_USER_EXISTS} from "../User/User.actions";
+import {Action} from 'redux-actions';
+import {ERROR_USER_DOES_NOT_EXIST, USER_NAME_TYPED} from './UserNameInput.actions';
+import {SUGGESTIONS_RECEIVED} from '../Suggestions/Suggestions.actions';
+import {USER_DETAILS_RECEIVED, VERIFY_USER_EXISTS} from '../User/User.actions';
 
 const defaultState = {
     blockUserInput: false,
     errorNoUser: false,
     suggestionsLoading: false,
-    value: ""
+    value: ''
 };
 
 export const userName = (state = defaultState, action: Action<any>) => {

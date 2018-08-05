@@ -1,4 +1,4 @@
-import {RouteComponentProps} from "react-router";
+import {RouteComponentProps} from 'react-router';
 
 export interface User {
     [key: string]: any;
@@ -8,7 +8,7 @@ export interface UserState {
     data?: User;
 }
 
-export interface UserProps extends RouteComponentProps<RoutePathParams>{
+export interface UserProps extends RouteComponentProps<RoutePathParams> {
     data?: User;
     refetchUserDetails: (userName: string) => void;
     selectRepo: (repoName: string) => void;
@@ -24,6 +24,6 @@ export interface RepositoryInfo {
     id: string;
     url: string;
     stargazers: {
-        totalCount: number
+        totalCount: number;
     };
 }
