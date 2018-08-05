@@ -5,19 +5,25 @@ import {userName} from "./UserNameInput/UserNameInput.reducer";
 import {suggestions} from "./Suggestions/Suggestions.reducer";
 import {logger} from "redux-logger";
 import {user} from "./User/User.reducer";
+import {createBrowserHistory} from "history";
+import {connectRouter, routerMiddleware} from "connected-react-router";
+
+export const history = createBrowserHistory();
 
 const enhancer = compose(
-    applyMiddleware(thunk, logger),
+    applyMiddleware(thunk, logger, routerMiddleware(history)),
     (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+const rootReducer = combineReducers({
+    fetchType,
+    suggestions,
+    user,
+    userName
+});
+
 export const store = createStore(
-    combineReducers({
-        fetchType,
-        suggestions,
-        user,
-        userName
-    }),
+    connectRouter(history)(rootReducer),
     {},
     enhancer
 );

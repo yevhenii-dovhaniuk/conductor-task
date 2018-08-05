@@ -2,6 +2,7 @@ import {ThunkDispatch} from "redux-thunk";
 import {fetchUserDetails} from "./User.service";
 import {getFetchTypeFromState} from "../FetchType/FetchType.service";
 import {createAction} from "redux-actions";
+import {push} from "connected-react-router";
 
 export const VERIFY_USER_EXISTS = "VERIFY_USER_EXISTS";
 export const USER_DETAILS_REQUESTED = "USER_DETAILS_REQUESTED";
@@ -17,10 +18,5 @@ export const selectUser = (userName: string) => async (
         getFetchTypeFromState(getState().fetchType)
     );
     dispatch(createAction(USER_DETAILS_RECEIVED)(userDetails));
-    dispatch(navigateToUser(userName));
-};
-
-export const navigateToUser = (userName: string) => () => {
-    // todo replace with history api call
-    window.location.href = `/user/${userName}`;
+    dispatch(push(`/user/${userName}`));
 };
