@@ -24,31 +24,33 @@ export class UserNameInput extends React.Component<UserInputProps> {
         return (
             <div className="user-name-input">
                 <div className="user-name-input__input-fields">
-                    <label htmlFor="user-name" className="user-name-input__label">
-                        User name
-                    </label>
-                    <input
-                        type="text"
-                        id="user-name"
-                        name="user-name"
-                        placeholder="type here"
-                        autoFocus={true}
-                        className={inputFieldClasses}
-                        value={this.props.value}
-                        onChange={this.handleChange}
-                        disabled={this.props.blockUserInput}
-                    />
-                    <button
-                        type="submit"
-                        onClick={this.handleUserNameSelect}
-                        disabled={this.props.blockUserInput || !this.props.value}
-                        className={buttonClasses}
-                    >
-                        Go
-                    </button>
+                    <form onSubmit={this.handleUserNameSelect}>
+                        <label htmlFor="user-name" className="user-name-input__label">
+                            User name
+                        </label>
+                        <input
+                            type="text"
+                            id="user-name"
+                            name="user-name"
+                            placeholder="type here"
+                            autoFocus={true}
+                            className={inputFieldClasses}
+                            value={this.props.value}
+                            onChange={this.handleChange}
+                            disabled={this.props.blockUserInput}
+                        />
+                        <button
+                            type="submit"
+                            onClick={this.handleUserNameSelect}
+                            disabled={this.props.blockUserInput || !this.props.value}
+                            className={buttonClasses}
+                        >
+                            Go
+                        </button>
+                    </form>
                 </div>
-                <Error errorMessage="User does not exist" display={this.props.errorNoUser} />
-                <SuggestionsContainer />
+                <Error errorMessage="User does not exist" display={this.props.errorNoUser}/>
+                <SuggestionsContainer/>
             </div>
         );
     }

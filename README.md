@@ -31,7 +31,8 @@ npm run start:client
 2) Paste generated token value to `/server/config/token/personal-auth-token.ts`
 3) Start server
 4) Open main page and select checkbox `Use GraphQL API` at the top-right corner or the page
-5) Excellent! You are now using `GraphQL API` for all data fetching! 
+5) Excellent! You are now using `GraphQL API` for all data fetching!
+* you can always return to http api simply unchecking `Use GraphQL API` from step 4. No server/client restarts required :D 
 
 
 ### Test
@@ -47,14 +48,16 @@ npm test
 * graphql-request
 
 ##### Frontend: 
+*initially created from `create-react-app` with further adjustments*
 * React + typescript
-* Redux (redux-thunk, redux-logger, redux-actions)
+* Redux (redux-thunk, redux-logger, redux-actions, connected-react-router)
+* React Router v4
 * webpack 4
 * lodash
 * post-css
 
 ##### Testing:
-* bundled with create-react-app Jest & Enzyme
+* bundled with `create-react-app` Jest & Enzyme
 
 ##### Code style and formatting:
 * ts-lint

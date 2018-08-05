@@ -1,0 +1,101 @@
+.repo {
+  display: grid;
+
+  grid:
+  "header header header header" auto
+  "stars description description created" auto
+  "fork language language updated" auto
+  "text ssh none pushed" auto
+  "text url none owner" auto
+  / 100px auto auto auto;
+
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  div {
+    padding: 10px;
+  }
+
+
+  .tile {
+    background: white;
+    border: 1px solid #d4d4d4;
+  }
+
+  &__header {
+    grid-area: header;
+    justify-self: center;
+    font-size: 24px;
+    color: black;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__created {
+    grid-area: created;
+  }
+
+  &__updated {
+    grid-area: updated;
+  }
+
+  &__pushed {
+    grid-area: pushed;
+  }
+
+  &__owner {
+    grid-area: owner;
+  }
+
+  &__created,
+  &__updated,
+  &__pushed,
+  &__owner {
+    color: grey;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  &__description {
+    grid-area: description;
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+
+  &__fork {
+    grid-area: fork;
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__language {
+    grid-area: language;
+  }
+  &__ssh {
+    grid-area: ssh;
+  }
+  &__stars {
+    grid-area: stars;
+
+    span {
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+  }
+  &__url {
+    grid-area: url;
+    display: flex;
+    flex-direction: row;;
+  }
+}

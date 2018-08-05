@@ -7,6 +7,7 @@ import {logger} from "redux-logger";
 import {user} from "./User/User.reducer";
 import {createBrowserHistory} from "history";
 import {connectRouter, routerMiddleware} from "connected-react-router";
+import {repo} from "./Repo/Repo.reducer";
 
 export const history = createBrowserHistory();
 
@@ -17,6 +18,7 @@ const enhancer = compose(
 
 const rootReducer = combineReducers({
     fetchType,
+    repo,
     suggestions,
     user,
     userName

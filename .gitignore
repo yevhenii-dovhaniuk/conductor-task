@@ -25,3 +25,5 @@ yarn-error.log*
 *.iml
 
 /server/dist
+
+/server/config/token
