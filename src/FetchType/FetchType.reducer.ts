@@ -1,6 +1,6 @@
-import {Action} from "redux-actions";
-import {FETCH_API_CHANGED} from "./FetchType.actions";
-import {FetchTypeState} from "./FetchType.model";
+import {Action} from 'redux-actions';
+import {FETCH_API_CHANGED} from './FetchType.actions';
+import {FetchTypeState} from './FetchType.model';
 
 const defaultFetchTypeState: FetchTypeState = {
     isUsingGraphQLAPI: false

@@ -1,14 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import {Provider} from "react-redux";
-import {store, history} from "./store";
-import {Route} from "react-router-dom";
-import "./index.pcss";
-import {HeaderContainer} from "./Header/Header.container";
-import {UserNameInputContainer} from "./UserNameInput/UserNameInput.container";
-import {UserContainer} from "./User/User.container";
-import {ConnectedRouter} from "connected-react-router";
-import {RepoContainer} from "./Repo/Repo.container";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {store, history} from './store';
+import {Route} from 'react-router-dom';
+import './index.pcss';
+import {HeaderContainer} from './Header/Header.container';
+import {UserNameInputContainer} from './UserNameInput/UserNameInput.container';
+import {UserContainer} from './User/User.container';
+import {ConnectedRouter} from 'connected-react-router';
+import {RepoContainer} from './Repo/Repo.container';
 
 ReactDOM.render(
     <Provider store={store}>
@@ -29,5 +29,5 @@ ReactDOM.render(
             </>
         </ConnectedRouter>
     </Provider>,
-    document.getElementById("root") as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
