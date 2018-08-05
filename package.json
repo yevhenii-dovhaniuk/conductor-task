@@ -64,7 +64,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "сoncurrently \"npm run start:server\" \"npm run start:client\"",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "start:server": "rimraf server/dist && tsc --p tsconfig.node.json && node server/dist/server.js",
