@@ -1,4 +1,4 @@
-import * as express from "express";
+import * as express from 'express';
 import suggestions from './suggestions/suggestions.http';
 import graphQlSuggestions from './suggestions/suggestions.graphql';
 import search from './search/seach.http';
@@ -22,7 +22,7 @@ app.use('/api/graphql/user/', graphQlRepo);
 
 app.listen(port, (err: any) => {
     if (err) {
-        return console.log("something bad happened", err);
+        return console.log('something bad happened', err);
     }
 
     console.log(`server is listening on ${port}`);

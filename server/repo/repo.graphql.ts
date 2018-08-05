@@ -1,6 +1,6 @@
-import * as express from "express";
-import {Request} from "express-serve-static-core";
-import {graphQLClient} from "../config/graphql-client";
+import * as express from 'express';
+import {Request} from 'express-serve-static-core';
+import {graphQLClient} from '../config/graphql-client';
 
 const router = express.Router();
 
@@ -30,7 +30,7 @@ const query = `
     }
 `;
 
-router.get("/:userName/repo/:repoName/data", async (req: Request, resp) => {
+router.get('/:userName/repo/:repoName/data', async (req: Request, resp) => {
     const variables: any = {userName: req.params.userName, repoName: req.params.repoName};
     let repoData = null;
     try {

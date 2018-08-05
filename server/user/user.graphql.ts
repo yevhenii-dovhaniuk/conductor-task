@@ -1,6 +1,6 @@
-import * as express from "express";
-import {Request} from "express-serve-static-core";
-import {graphQLClient} from "../config/graphql-client";
+import * as express from 'express';
+import {Request} from 'express-serve-static-core';
+import {graphQLClient} from '../config/graphql-client';
 
 const router = express.Router();
 
@@ -56,7 +56,7 @@ const userDetailsQuery = `
    }
 `;
 
-router.get("/:typedUserName/exists", async (req: Request, resp) => {
+router.get('/:typedUserName/exists', async (req: Request, resp) => {
     const variables: any = {typedUserName: req.params.typedUserName};
     let doesUserExist = null;
     try {
@@ -68,7 +68,7 @@ router.get("/:typedUserName/exists", async (req: Request, resp) => {
     resp.send(Boolean(doesUserExist));
 });
 
-router.get("/:typedUserName", async (req: Request, resp) => {
+router.get('/:typedUserName', async (req: Request, resp) => {
     const variables: any = {typedUserName: req.params.typedUserName};
     let userRequest: any;
     try {
