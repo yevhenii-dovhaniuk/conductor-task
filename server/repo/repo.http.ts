@@ -6,10 +6,11 @@ import {GITHUB_API_URL} from '../config/config';
 import {toGraphQlCompatibleModel} from './repo.model';
 
 const router = express.Router();
+const httpAuthHeader = authorizationHeader.Authorization === 'bearer ' ? {} : authorizationHeader;
 const defaultOptions = {
     headers: {
         'User-Agent': 'Github-accounts-viewer',
-        ...authorizationHeader
+        ...httpAuthHeader
     }
 };
 
