@@ -66,9 +66,10 @@
   "scripts": {
     "start": "oncurrently \"npm run start:server\" \"npm run start:client\"",
     "build": "node scripts/build.js",
-    "test": "node %NODE_DEBUG_OPTION% scripts/test.js --env=jsdom",
-    "start:server": "rimraf server/dist && tsc --p tsconfig.node.json && node %NODE_DEBUG_OPTION% server/dist/server.js",
-    "start:client": "node scripts/start.js"
+    "test": "node scripts/test.js --env=jsdom",
+    "start:server": "rimraf server/dist && tsc --p tsconfig.node.json && node server/dist/server.js",
+    "start:client": "node scripts/start.js",
+    "debug:server": "rimraf server/dist && tsc --p tsconfig.node.json && node %NODE_DEBUG_OPTION% server/dist/server.js"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.6",
